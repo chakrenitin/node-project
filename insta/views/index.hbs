@@ -1,0 +1,52 @@
+<hr/>
+<div class="main" style="background-color:ghostwhite;">
+    <div class="container-fluid">
+        <div class="row ">
+            <div class="col-sm-3 col-md-6 col-lg-8 text-cente" style="margin-top: 15px;">
+                {{#each post}}
+                <div class="card mt-4" style="width: 18rem;margin-left: 20%;min-width: 500px;">
+                    <div class="row">
+                        <div style="width:10%;margin-left:5%" class="my-auto align-self-center">
+                            <img src="{{this.profile}}" class="rounded-circle" style="max-width: 38px;"/>
+                        </div>
+                        <div >
+                            <h7><b>{{this.hand}}</b></h7><br>
+                            <h7>{{this.name}}</h7>
+                        </div> 
+                    </div>
+                    <hr/>
+                    <img src="{{this.post}}" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">{{this.comment}}</p>
+                        <a href="/post/?pid={{this.pid}}" class="btn btn-primary">Go somewhere</a>
+                    </div>
+                </div>
+                {{/each}}
+            </div>
+            <div class="col-sm-9 col-md-6 col-lg-4">
+                <div class="row" style="margin-top: 15px;">
+                    <a href="/profile/?id1={{id}}">
+                        <div style="width:10%;margin-left:5%" class="my-auto align-self-center">
+                            <img src={{profile}} class="rounded-circle" style="max-width: 38px;"/>
+                        </div>
+                    </a>
+                        <div style="margin-left: 5%;">
+                            <a href="/profile/?id1={{id}}" style="text-decoration: none;color: inherit;"><h7><b>{{handle}}</b></h7></a><br>
+                            <h7>{{id}}</h7>
+                        </div> 
+                </div>
+
+                <div class="card" style="width: 18rem;margin-top: 5%;max-height: 200px;overflow-y:scroll">
+                    <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.Some quick example text to build on the card title and make up the bulk of the card's content</p>
+                        <a href="#" class="card-link">Card link</a>
+                        <a href="#" class="card-link">Another link</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+</div> 
+</div>

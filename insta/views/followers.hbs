@@ -1,0 +1,17 @@
+<div = class="card mt-5 shadow p-3 mb-5 bg-white rounded" style="max-width: 50%;margin-left: 25%">
+    <h5>Followers</h5>
+    {{#each follow}}
+        <hr/>
+        <div class="row text-center card-body" style="margin-top: 1px;margin-left:25%">
+            <a href="/profile/?id1={{this.userId}}">
+                <div style="width:10%;" class="my-auto align-self-center">
+                    <img src={{this.profile}} class="rounded-circle mt-1" style="max-width: 38px;"/>
+                </div>
+            </a>
+                <div style="margin-left: 5%;">
+                    <a href="/profile/?id1={{this.userId}}" style="text-decoration: none;color: inherit;"><h7><b>{{this.handle}}</b></h7></a><br>
+                    <h7>{{this.name}}</h7>
+                </div> 
+        </div>
+    {{/each}}
+</div>

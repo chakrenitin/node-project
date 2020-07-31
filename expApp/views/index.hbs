@@ -1,0 +1,30 @@
+<h4> Insert data in database </h4>
+<form action="/insert" method="post">
+	<div class="input">
+		<label for="roll">Roll No ;- </label>
+		<input type="text" name="roll" id="roll">
+	</div>
+	<div class="input">
+		<label for="name">Name</label>
+		<input type="text" name="name" id="name">
+	</div>
+	<div class="input">
+		<label for="email">Email</label>
+		<input type="text" name="email" id="email">
+	</div>
+	<button type="submit">Submit</button>
+</form>
+
+
+<h4> Display </h4>
+<form action="/display" method="get">
+	<button type="submit">Display</button>
+</form>
+
+{{# if success }}
+	<ul>
+		{{#each item}}
+			<li>{{this.roll}}&nbsp{{this.name}}&nbsp{{this.email}}</li>
+		{{/each}}
+	</ul>
+{{/if}}

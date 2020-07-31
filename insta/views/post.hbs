@@ -1,0 +1,41 @@
+<div = class="card mt-5 shadow p-1 mb-2 bg-white rounded" style="max-width: 70%;margin-left: 14%;min-height: 500px;">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-sm-6 col-md-6 col-lg-6" style="height: 100%;">
+                <div class="card" style="width: 23rem;">
+                <img class="card-img-top" src="{{pos.post}}" alt="Card image cap">
+                <div class="card-body">
+                    <p class="card-text"><b>{{pos.userId}}</b>{{pos.comment}}</p>
+                </div>
+                </div>
+            </div>
+            <div class="col-sm-6 col-md-6 col-lg-6" style="">
+                <div class="card" style="width: 23rem;margin-top: 1px;min-height:400px;max-height: 400px;overflow-y:scroll">
+                    <div class="card-body">
+                        {{#each pos.arr}}
+                            <div class="ml-3"> 
+                                <div class="row">
+                                    <h7><b>{{this.userId}}</b> {{this.comm}}</h7>
+                                </div>
+                                <div class="row text-center">
+                                    <h7 class="ml-6" style="font-size: 13px;"><b><a href="/showCom/?cid={{this.comId}}">Show replies</a></b></h7>
+                                </div>
+                            </div>
+                            <hr/>
+                        {{/each}}
+                    </div>
+                </div>
+                <div>
+                    <form action="/postCom/?pid={{pos.postId}}" method="POST">
+                        <div class="row mt-3">
+                            <input class="form-control ml-3" type="text" placeholder="Comment" style="width: 300px;" id="comm" name="comm">
+                            <button type="submit" class="btn btn-primary ml-1">POST</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div> 
+</div>
+
+
